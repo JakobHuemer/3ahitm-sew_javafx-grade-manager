@@ -4,12 +4,21 @@ import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import model.GradeModel;
+import view.GradePresenter;
+import view.GradeView;
 
 public class App extends Application {
     @Override
     public void start( Stage primaryStage ) throws Exception {
 
-        Scene scene = new Scene( new StackPane( new Text( "hello world" ) ), 400, 400 );
+        var model = new GradeModel();
+
+        var view = new GradeView();
+
+        Scene scene = new Scene( view );
+
+        var presenter = new GradePresenter( view, model );
 
         primaryStage.setScene( scene );
         primaryStage.show();
