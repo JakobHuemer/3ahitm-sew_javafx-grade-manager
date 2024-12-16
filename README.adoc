@@ -1,0 +1,5 @@
+= JavaFX Grade Manager
+
+:imagesdir: images
+
+image::model.png[]
